@@ -4,10 +4,10 @@ set -e
 SHELL_DIR=$(cd "$(dirname "$0")"; pwd)
 OUT_DIR=$SHELL_DIR/out
 
-CMAKE=$SHELL_DIR/toolchain/cmake/bin/
+CMAKE=/usr/bin
 
-LINUX_CROSS_PREFIX=$SHELL_DIR/toolchain/linux_toolchain/bin/riscv64-unknown-linux-gnu-
-NEWLIB_ELF_CROSS_PREFIX=$SHELL_DIR/toolchain/elf_newlib_toolchain/bin/riscv64-unknown-elf-
+LINUX_CROSS_PREFIX=riscv64-unknown-linux-gnu-
+NEWLIB_ELF_CROSS_PREFIX=riscv64-unknown-elf-
 
 # if no arg given
 if [ $# -ne 1 ]; then
